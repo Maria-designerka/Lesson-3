@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 6</title>
+  </head>
+  <body>
+    <button onclick="history.back()">Go Back</button>
+
+    <p>
+      6. З клавіатури вводиться номер дня тижня. Вивести на екран назву дня.
+    </p>
+    <script>
+      const monday = 1;
+      tuesday = 2;
+      wednesday = 3;
+      thursday = 4;
+      friday = 5;
+      saturday = 6;
+      sunday = 7;
+
+      const dayNum = parseInt(prompt("Enter the number of the day: "));
+
+      switch (dayNum) {
+        case 1:
+          alert("This is Monday");
+          break;
+        case 2:
+          alert("This is Tuesday");
+          break;
+        case 3:
+          alert("This is Wednesday");
+          break;
+        case 4:
+          alert("This is Thursday");
+          break;
+        case 5:
+          alert("This is Friday");
+          break;
+        case 6:
+          alert("This is Saturday");
+          break;
+        case 7:
+          alert("This is Sunday");
+          break;
+        default:
+          alert("This is an invalid number");
+      }
+    </script>
+    <script></script>
+  </body>
+</html>

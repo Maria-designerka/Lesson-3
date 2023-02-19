@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 4</title>
+  </head>
+  <body>
+    <p>
+      <button onclick="history.back()">Go Back</button>
+
+      4. З клавіатури вводиться вік людини. Вивести на екран ким він є (дитиною
+      у садочку, школярем, студентом, працівником, пенсіонером).
+    </p>
+
+    <script>
+      //0. Values
+      const littleChild = 6; // 0-6 years
+      student = 17; // 17-23
+      adultWorker = 24; // 24 - 59
+      retiredPerson = 65; // 60 and older
+
+      let userStatus;
+
+      const userAge = parseInt(prompt("User age: "));
+
+      //1. Define a child
+      if (userAge <= littleChild)
+        alert((userStatus = "The user is a Small Child"));
+      else if (userAge < student)
+        alert((userStatus = "The user is a School Child"));
+      //2. Define a school child
+      else if (userAge < adultWorker)
+        alert((userStatus = "The user is a Student")); //3. Define a student
+      else if (userAge < retiredPerson)
+        alert((userStatus = "The user is an Adult Worker"));
+      //4. Define an adult worker
+      else if (userAge >= retiredPerson)
+        alert((userStatus = "The user is a Retired Person")); //5. Define a retired
+    </script>
+  </body>
+</html>

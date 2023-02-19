@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 2</title>
+  </head>
+  <body>
+    <button onclick="history.back()">Go Back</button>
+
+    <p>
+      2. З клавіатури вводиться ціна товару і кількість грошей. Якщо грошей не
+      вистачає то відмовляємо у покупці, інакше, якщо ще залишаються гроші, то
+      пропонуємо купити лотерею за 4 грн.
+    </p>
+    <script>
+      const lotteryPrice = 4;
+      const itemName = prompt("Enter the item name: ");
+      let itemPrice = parseFloat(prompt("Enter the item price: ", "00.00 $"));
+      let myMoney = parseFloat(
+        prompt("Enter the amount of money you have: ", "00.00 $")
+      );
+      let remainingBalance = myMoney - itemPrice;
+
+      if (itemPrice > myMoney) {
+        alert(
+          "Oops! It seems you don't have enough money. Come back again when you become a Front-End Developer."
+        );
+      } else if (myMoney > itemPrice) {
+        document.write(`<h4>You can afford to buy ${itemName}!</h4>`);
+        if (remainingBalance >= lotteryPrice) {
+          document.write(
+            `<h4>Would you like to add a lottery to your basket?</h4>`
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

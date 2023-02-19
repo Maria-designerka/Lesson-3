@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+  </head>
+  <body>
+    <button onclick="history.back()">Go Back</button>
+    <p>
+      1. З клавіатури вводяться імена двох дітей та кількість у них цукерок.
+      Вивести не екран ім’я тієї дитини, у якої кількість цукерок є більшою, або
+      вивести, що кількість однакова.
+    </p>
+
+    <script>
+      // 0. Name the variable
+
+      const childNameOne = prompt("Child Name: ", "e.g. Jane");
+      const sweetsNumOne = parseInt(prompt("The Number of Sweets: ", "e.g. 3"));
+
+      const childNameTwo = prompt("Child Name: ", "e.g. Bobby");
+      const sweetsNumTwo = parseInt(prompt("The Number of Sweets: ", "e.g. 5"));
+
+      // 1. Compare who has MORE sweets OR if they have an equal amount of them
+      if (sweetsNumOne > sweetsNumTwo)
+        //first child has more sweets
+        document.write(
+          `<h4>${childNameOne} has more sweets than ${childNameTwo}.</h4>`
+        );
+      //second child has more sweets
+      else if (sweetsNumTwo > sweetsNumOne)
+        document.write(
+          `<h4>${childNameTwo} has more sweets than ${childNameOne}.</h4>`
+        );
+      //children posses equal amount of sweets
+      else if (sweetsNumOne == sweetsNumTwo)
+        document.write(
+          `<h4>${childNameOne} and ${childNameTwo} have the same amount of sweets.</h4>`
+        );
+    </script>
+  </body>
+</html>

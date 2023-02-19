@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 5</title>
+  </head>
+  <body>
+    <button onclick="history.back()">Go Back</button>
+
+    <p>
+      5. З клавіатури вводиться назва категорії водія (А-мотоцикл, В-легковий
+      автомобіль, С-вантажний автомобіль). Вивести на екран назву транспортного
+      засобу, яким він може керувати.
+    </p>
+
+    <script>
+      //0. Name he Variables
+      const drivingCategory = prompt(
+        "Enter the driving category (A), (B) or (C)"
+      );
+
+      //1. category A
+      if (drivingCategory === "A" || drivingCategory === "a") {
+        alert("With a driving category (A) a driver can use a Motorcycle.");
+      } else if (drivingCategory === "B" || drivingCategory === "b") {
+        alert("With a driving category (B) a driver can use a Passenger Car.");
+      } else if (drivingCategory === "C" || drivingCategory === "c") {
+        alert("With a driving category (C) a driver can use a Truck.");
+      } else {
+        alert("Invalid driving category.");
+      }
+    </script>
+  </body>
+</html>
